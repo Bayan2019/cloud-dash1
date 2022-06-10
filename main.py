@@ -22,6 +22,9 @@ from dash.dependencies import Input, Output
 import pandas as pd
 
 import plotly.express as px
+
+import plotly.graph_objects as go
+
 from datetime import datetime
 
 import csv
@@ -198,7 +201,6 @@ def get_title(ticker):
 
     return title
 
-
 def plot_style(paper_bg='black', plot_bg='rgb(82, 82, 82)', font='rgb(205, 133, 0)'):
     plot_style = {'paper_bgcolor': paper_bg, 'plot_bgcolor': plot_bg,
                   'font': {'color': font}}
@@ -271,7 +273,6 @@ app.layout = html.Div([
     html.Img(src=tcc_logo, style={'width': '250px', 'display': 'inline-block', 'margin': '0px 60px 0px 60px'})],
     style={'text-align': 'center', 'display': 'inline-block', 'width': '100%',
            'background-color': 'black', 'color': 'rgb(254, 163, 27)'})
-
 
 # Overall Summary tabs
 
@@ -677,7 +678,6 @@ def render_common_content(tab):
                                    'background-position': 'center', 'background-size': '290px 230px'})],
                     style={'width': '1400px', 'display': 'inline-block',
                            'border': '1px solid black'}), ])
-
 
 # Individual summary tabs
 
